@@ -1,0 +1,162 @@
+:root {
+  --Moderate-violet: rgb(117, 65, 200);
+  --Very-dark-grayish-blue: rgb(72, 85, 106);
+  --Very-dark-blackish-blue: rgb(25, 33, 46);
+  --White: rgb(255, 255, 255);
+  --Light-gray: rgb(207, 207, 207);
+  --Light-grayish-blue: rgb(236, 242, 248);
+
+  --fuente-principal: "Barlow Semi Condensed", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.3rem;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+  background-color: var(--Light-grayish-blue);
+}
+img {
+  max-width: 15%;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.img__border-morado {
+  border: 2px solid rgb(138, 83, 226);
+}
+.img__border-gris {
+  border: 2px solid rgb(207, 207, 207);
+}
+
+[class*="contenedor"] {
+  max-width: 120rem;
+  margin: 5rem auto;
+  width: 75%;
+}
+
+/*card grid*/
+
+.card__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 1440px) {
+  .card__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card:nth-child(1) {
+    grid-column: span 2;
+  }
+  .card:nth-child(3) {
+    grid-column: 1;
+  }
+  .card:nth-child(4) {
+    grid-column: span 2;
+  }
+  .card:nth-child(5) {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}
+
+.card {
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.card__usuario {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+.usuario__descripcion {
+  margin: 0;
+}
+
+.card__heading {
+  margin: 0;
+}
+
+.card__subtitle {
+  margin: 0;
+  color: rgba(207, 207, 207, 0.5);
+  font-size: 1.1rem;
+}
+
+.card__title {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  width: 20.6rem;
+}
+
+.card__text {
+  font-weight: 300;
+  color: rgba(207, 207, 207, 0.7);
+  margin: 0;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .card__title {
+    width: auto;
+    font-size: 2rem;
+  }
+  .card__text {
+    margin: 2rem 0 0 0;
+  }
+}
+
+.opacity-70 {
+  color: rgb(92, 90, 90);
+}
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(4) {
+  color: var(--White);
+}
+
+.card:nth-child(1) {
+  background-color: var(--Moderate-violet);
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-size: 10rem;
+  background-position: 16rem top;
+}
+
+@media (min-width: 1440px) {
+  .card:nth-child(1) {
+    background-position: 35rem top;
+  }
+}
+
+.card:nth-child(2) {
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+.card:nth-child(3),
+.card:nth-child(5) {
+  background-color: var(--White);
+}
+
+.card:nth-child(4) {
+  background-color: var(--Very-dark-blackish-blue);
+}
